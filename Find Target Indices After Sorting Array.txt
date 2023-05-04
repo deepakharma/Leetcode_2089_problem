@@ -1,0 +1,18 @@
+class Solution {
+public:
+    vector<int> targetIndices(vector<int>& nums, int target) {
+        sort(nums.begin(),nums.end());
+        int i = 0;
+        vector<int> nums2;
+        
+       for(i = 0; i<nums.size(); i++){
+           if(nums[i] == target){
+               nums2.push_back(i);
+           }
+           if(nums[i] > target){
+               break;
+           }
+       }
+        return nums2;
+    }
+};
